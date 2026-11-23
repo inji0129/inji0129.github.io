@@ -1,0 +1,12 @@
+title: 지인 | Backend Engineer
+url: https://inji0129.github.io
+baseurl: ""
+lang: ko
+markdown: kramdown
+exclude:
+  - README.md
+  - generate.py
+  - _preview
+  - Gemfile
+  - Gemfile.lock
+  - vendor
