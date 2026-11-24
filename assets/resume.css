@@ -10,3 +10,5 @@
 @media print{.skill-grid{display:block}.skill-group{display:flex;align-items:baseline;gap:9pt;margin-bottom:4pt}.skill-group h3{flex:0 0 77pt;margin:0}.skill-group .skill-items{flex:1}.company li{margin-bottom:4pt}}
 
 @media print{.skill-group h3{letter-spacing:.04em;white-space:nowrap}}
+
+@media print{#career{break-before:page}}
