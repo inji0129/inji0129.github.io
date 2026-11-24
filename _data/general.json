@@ -211,7 +211,7 @@
       ]
     }
   ],
-  "ai": "MCP로 Figma·Notion과 앱·웹·백엔드·인프라 코드를 연결해 요구사항을 확인하고 구현 계획 수립. **AI로 구현 속도를 높이되, 코드 검증과 구조 설계는 직접 판단**.",
+  "ai": "MCP로 Figma·Notion과 앱·웹·백엔드·인프라 코드를 연결해 요구사항을 확인하고 구현 계획 수립. **AI를 활용해 구현 속도를 높이고, 코드 검증과 구조 설계는 직접 수행**.",
   "skills": [
     "Python · TypeScript · JavaScript · Kotlin · SQL",
     "Django/DRF · NestJS · Spring Boot · MySQL · PostgreSQL · MongoDB · DynamoDB",
