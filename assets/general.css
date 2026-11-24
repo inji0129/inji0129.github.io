@@ -14,4 +14,6 @@
 
 @media print{#smaxh,#playtag,#artue,#viewee,#refeel{break-before:auto}.company-heading{break-after:avoid}.tags{break-after:avoid}}
 
-@media print{#smaxh .work:nth-of-type(2){break-before:page}#viewee{break-inside:avoid}.work{page-break-inside:avoid;break-inside:avoid-page}}
+@media print{#viewee{break-inside:avoid}.work{page-break-inside:avoid;break-inside:avoid-page}}
+
+@media print{.work{margin-top:6pt;padding-top:6pt}.work li{line-height:1.55}.company{padding:10pt 0}.more{padding-top:14pt}.intro{line-height:1.55}}
