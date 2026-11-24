@@ -17,3 +17,5 @@
 @media print{#viewee{break-inside:avoid}.work{page-break-inside:avoid;break-inside:avoid-page}}
 
 @media print{.work{margin-top:6pt;padding-top:6pt}.work li{line-height:1.55}.company{padding:10pt 0}.more{padding-top:14pt}.intro{line-height:1.55}}
+
+.measurement-note{font-size:.8em!important;color:#7b858b!important;list-style:none}.measurement-note strong{font-weight:400}@media print{.measurement-note{font-size:7.5pt!important}}
