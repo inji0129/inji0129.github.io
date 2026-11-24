@@ -6,3 +6,8 @@
 .company-heading h2{color:#17685f}.company-heading .eyebrow{color:#67887d}.role{color:#3c4c53;font-weight:500}.dates{color:#7b858b}.description{color:#5b686c;background:#f2f6f4;border-left:3px solid #8ab6a5;padding:12px 15px;border-radius:0 4px 4px 0}.tags span{color:#526e63;background:#edf4f0;border-color:#dde8e0}.work h3{color:#253747}.work li{color:#4e5b63}.work li::marker{color:#7b978b}.more p{color:#65716f}.ai{border-left-color:#a2c2b1}
 @media(max-width:600px){.description{margin-top:15px}}
 @media print{.description{color:#5b686c;background:#f2f6f4;border-left:2pt solid #8ab6a5;padding:6pt 9pt}.company-heading h2{color:#17685f}.role{color:#3c4c53}.dates{color:#7b858b}.work h3{color:#253747}.work li{color:#4e5b63}}
+
+/* Keep browser PDF output aligned with the downloadable resume. */
+@media print{.selected{display:block;padding:12pt 0 16pt}.selected-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8pt}.selected-grid>a{padding:10pt}.selected h3{font-size:12pt;margin:5pt 0}.selected .eyebrow{font-size:6.5pt}.selected-grid>a>p:last-child{font-size:8pt}#artue,#refeel{break-before:page}#playtag,#viewee{break-before:auto}footer{display:none}}
+
+@media print{.work{margin-top:7pt;padding-top:7pt}.work li{margin:3pt 0}.company{padding:12pt 0}.tags{margin:7pt 0 8pt}}
