@@ -264,17 +264,31 @@
         "MySQL",
         "PostgreSQL",
         "DynamoDB",
-        "MongoDB"
+        "MongoDB",
+        "Redis"
       ]
     },
     {
       "name": "Infrastructure",
       "items": [
-        "AWS · ECS / EC2 / S3 / Lambda / CloudFront",
+        "AWS (EC2, ECS, RDS, S3, ECR, Route53, Lambda, SQS, Secrets Manager, CloudFront)",
         "Terraform",
         "Docker",
         "Serverless Framework",
         "Datadog"
+      ]
+    },
+    {
+      "name": "ETC",
+      "items": [
+        "Git",
+        "Swagger",
+        "Notion",
+        "Slack",
+        "Claude Code",
+        "Codex",
+        "Hermes",
+        "Herdr"
       ]
     }
   ]
