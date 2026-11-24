@@ -11,3 +11,7 @@
 @media print{.selected{display:block;padding:12pt 0 16pt}.selected-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8pt}.selected-grid>a{padding:10pt}.selected h3{font-size:12pt;margin:5pt 0}.selected .eyebrow{font-size:6.5pt}.selected-grid>a>p:last-child{font-size:8pt}#artue,#refeel{break-before:page}#playtag,#viewee{break-before:auto}footer{display:none}}
 
 @media print{.work{margin-top:7pt;padding-top:7pt}.work li{margin:3pt 0}.company{padding:12pt 0}.tags{margin:7pt 0 8pt}}
+
+@media print{#smaxh,#playtag,#artue,#viewee,#refeel{break-before:auto}.company-heading{break-after:avoid}.tags{break-after:avoid}}
+
+@media print{#smaxh .work:nth-of-type(2){break-before:page}#viewee{break-inside:avoid}.work{page-break-inside:avoid;break-inside:avoid-page}}

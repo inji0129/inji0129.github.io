@@ -2,7 +2,7 @@
   "name": "지인",
   "title": "Backend Engineer",
   "intro": [
-    "**서비스를 만들고, 운영하며 드러나는 문제를 개선해 온 5년 이상 경력의 백엔드 개발자입니다.** Python·TypeScript·Kotlin으로 결제·정산 기능, 사내 운영 도구와 신규 서비스 API를 개발해 왔습니다.",
+    "**서비스 개발부터 성능 개선, AWS 운영 환경까지 함께 다뤄 온 5년 이상 경력의 백엔드 개발자입니다.** Python·TypeScript·Kotlin으로 결제·정산 기능과 신규 서비스를 개발하고, 쿼리 튜닝과 배포·모니터링 환경을 개선해 왔습니다.",
     "**반복되는 수작업을 줄이고, 기존 서비스를 유지하며 구조를 개선하는 일**에 흥미가 있습니다. 기획·프런트엔드·영업·운영팀과 요구사항을 조율하고 개발부터 배포·운영까지 맡아 왔습니다.",
     "친구와 공동 기획한 **re:feel의 앱과 백엔드를 직접 개발해 약 2개월 만에 출시**했습니다. 사용자 데이터와 피드백을 살피며 제품을 개선하고 있습니다."
   ],
@@ -33,6 +33,20 @@
           ]
         },
         {
+          "title": "MySQL 쿼리 튜닝과 조회 성능 개선",
+          "bullets": [
+            "**Datadog APM으로 35~75초 걸리던 레슨 목록 조회의 병목 분석**. 중첩 서브쿼리를 레슨 ID 선조회 방식으로 분리하고 기존 필터·정렬·페이지네이션 유지.",
+            "**거래 내역·매치 상세의 N+1 쿼리 제거와 매치 유형 복합 인덱스 추가**. 커뮤니티 목록의 댓글·좋아요·관심 집계를 개별 서브쿼리로 분리해 다중 조인으로 불어나는 중간 데이터 제거."
+          ]
+        },
+        {
+          "title": "AWS 운영 환경과 관측 도구 개선",
+          "bullets": [
+            "**Terraform으로 한국·미국 환경의 Google·Apple 인증 설정과 ECS의 Secrets Manager 참조 구성**. SES 발신 도메인 인증과 ECS 이메일 발송 권한 설정.",
+            "**Datadog Agent와 Fargate Live Processes 연동, 서버 로그에 trace ID 추가**. 기존 CloudWatch 오류 필터와 Slack 알림을 유지하며 로그 추적 개선."
+          ]
+        },
+        {
           "title": "환불 실패 대응과 중복 처리 방지",
           "bullets": [
             "한 건의 실패로 전체 환불이 중단되던 구조를 **참가자별 독립 트랜잭션으로 변경**. 실패 내역 기록과 Slack 알림 추가.",
@@ -56,13 +70,6 @@
           "bullets": [
             "현지 테니스장 데이터 연동과 **코트별 타임존에 맞춘 매치 시간 처리**. 서버와 코트의 시간대 차이로 생기는 날짜 비교 오류 수정.",
             "**DynamoDB에서 사용자 UUID를 공유**해 한 앱에서 국가를 바꿔도 같은 계정으로 이용하도록 구현. 로그인·탈퇴·프로필 동기화 문제 개선."
-          ]
-        },
-        {
-          "title": "조회 병목 진단과 개선",
-          "bullets": [
-            "**Datadog APM으로 레슨 목록 조회의 MySQL 병목을 발견**하고, 레슨 ID를 먼저 조회하도록 쿼리 분리. 기존 필터·정렬·페이지네이션을 유지하며 관련 테스트 54개 통과.",
-            "거래 내역·매치 상세의 N+1 쿼리와 목록 집계 쿼리 개선. 서버 로그에 trace ID를 연결해 오류 추적 지원."
           ]
         }
       ]
@@ -109,7 +116,7 @@
       "label": "ARTUE",
       "role": "Backend Developer",
       "dates": "2023.04 — 2024.06",
-      "description": "작품 거래와 온라인 전시를 제공하는 아트 커머스 플랫폼. 초기 백엔드 개발, API 전환과 미디어 처리 담당.",
+      "description": "작품 거래와 온라인 전시를 제공하는 아트 커머스 플랫폼. 초기 백엔드 개발, PostgreSQL 조회 개선과 AWS 운영 환경 설정 담당.",
       "stack": [
         "TypeScript",
         "NestJS",
@@ -140,10 +147,24 @@
           ]
         },
         {
-          "title": "조회·모니터링·배포 환경 개선",
+          "title": "PostgreSQL 조회 최적화",
           "bullets": [
-            "작품·에디션 조회 분리와 인덱스 적용으로 조회 비용 개선. **CloudWatch·Lambda로 오류·구매·문의·배포 실패 Slack 알림 구성**.",
-            "Terraform으로 ECS 자동 확장, 환경별 빌드 변수와 API 연결, CDN의 통화·쿠키 전달 설정 개선."
+            "**작품 목록의 에디션 조회를 분리하고 작품명 인덱스 추가**. 관리자 목록의 불필요한 관계 조회를 제거하고 에디션 갱신을 다건 쿼리로 변경.",
+            "작품 그룹과 작품 조회를 분리하고 관계 조인을 정리해 **목록 조회의 DB 처리 부담 완화**."
+          ]
+        },
+        {
+          "title": "Terraform으로 AWS 배포·운영 설정 관리",
+          "bullets": [
+            "**ECS 서비스 수와 Auto Scaling 최소·최대 용량을 환경별 변수로 관리**하고 CPU 기준 확장 설정 조정. CodeBuild·ECS에 환경별 빌드 변수와 v3 API 연결 반영.",
+            "**CloudFront의 통화·언어 쿠키 전달 설정 변경**. 구매·문의용 CloudWatch 로그 그룹과 ECS 접근 권한 구성."
+          ]
+        },
+        {
+          "title": "운영 알림과 Lambda 실행 환경 개선",
+          "bullets": [
+            "**CloudWatch·Lambda로 API 오류·구매·문의와 배포 파이프라인 실패를 Slack에 알림**. DB 마이그레이션 실패 확인과 알림 형식 개선.",
+            "이미지 처리에 메모리 스트림을 적용하고 **Lambda Layer 의존성 관리와 Python 3.8→3.11 전환** 수행."
           ]
         }
       ]
@@ -214,7 +235,8 @@
   "ai": "MCP로 Figma·Notion과 앱·웹·백엔드·인프라 코드를 연결해 요구사항을 확인하고 구현 계획 수립. **AI를 활용해 구현 속도를 높이고, 코드 검증과 구조 설계는 직접 수행**.",
   "skills": [
     "Python · TypeScript · JavaScript · Kotlin · SQL",
-    "Django/DRF · NestJS · Spring Boot · MySQL · PostgreSQL · MongoDB · DynamoDB",
-    "AWS · Terraform · Docker · Datadog"
+    "Django/DRF · NestJS · Spring Boot | MySQL · PostgreSQL · DynamoDB · MongoDB",
+    "AWS: ECS · EC2 · Auto Scaling · S3 · Lambda · CloudFront · CloudWatch · SES · IAM · Secrets Manager · CodeBuild",
+    "Terraform · Docker · Datadog"
   ]
 }
