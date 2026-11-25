@@ -78,10 +78,10 @@
       "dates": "Apr 2025 - Present",
       "description": "Tennis matching, lessons, and community platform. Backend development and operations for services in Korea, the US, and Australia.",
       "highlights": [
-        "**Payments for tier-based matches, social matches, and lessons.** Built payment, cancellation, refund, settlement, and withdrawal flows. Developed and operated the backend for a matching service whose **monthly payment volume grew from KRW 200M to 400M and transaction count from 16K to 30K** between August and October 2025.",
+        "**Python · Django · MySQL backend for match and lesson payments and settlement.** Built payment, cancellation, refund, and withdrawal flows. Supported a service whose monthly payment volume grew from **KRW 200M to 400M**, and transaction count from **16K to 30K**, between August and October 2025.",
         "**Partial refunds and settlement for no-show deposits.** Contributed to deposit payment, partial-refund, and settlement functionality; the deposit configuration rate was **78% in September 2026**.",
         "**Web authentication compatible with the existing mobile app.** Integrated Google, Apple, and Kakao web login with existing signup and account-linking flows. Separated app and web authentication, including environment-specific OAuth and Secrets configuration in Terraform and ECS.",
-        "**Cross-country account linking, closure, and re-registration consistency.** Connected country-specific accounts through shared UUIDs and merge logic in DynamoDB. Added shared-state checks to account linking, login, and token refresh to prevent accounts closed in one country from logging in through another.",
+        "**DynamoDB-based global account integration.** Kept country-specific databases separate while linking accounts through shared UUIDs. Added shared-state validation to login and token refresh to resolve cross-country inconsistencies in account closure and re-registration.",
         "**US and Australian launch support.** Integrated local tennis-court data and court-specific time zones, correcting match-date errors caused by differences between server and local time.",
         "**Unified APIs for social and tier-based matches.** Consolidated response and processing structures while retaining legacy endpoints and reusing payment and notification logic so the existing app could coexist with the new APIs.",
         "**Lesson development and operational improvements.** Built models and APIs for recurring schedules, applications, payments, and settlement. Used APM and SQL to diagnose slow queries and reduce repeated lookups and unnecessary joins."
@@ -100,9 +100,9 @@
       "dates": "Jun 2024 - Mar 2025",
       "description": "AI video analysis of preschool children's behavior. Built internal web applications for analysis reruns and client configuration.",
       "highlights": [
-        "**Analysis-rerun preparation reduced from about 1 hour to 5 minutes or less.** Built and deployed a Python web application that replaced manual server access and code execution with a selection-and-submit workflow.",
+        "**Python web tool for rerunning failed video-analysis jobs.** Replaced manual server access and code execution with a web-based selection-and-submit workflow, reducing rerun preparation from **about 1 hour to 5 minutes or less**. Built and deployed the tool.",
         "**Client configuration moved from developer edits to operations self-service.** Enabled staff to record and apply kindergarten schedules and settings through a web interface, reducing handoffs and manual code changes. Ran the tool on a low-cost single instance suited to internal usage.",
-        "**Applied a new stack within a one-week sprint.** Built the complete set of kindergarten student-management APIs on my first production project using Kotlin and Spring Boot."
+        "**Kotlin · Spring Boot APIs for kindergarten student management.** Built the complete set of new APIs **within a one-week sprint**, applying both technologies in production for the first time."
       ]
     },
     {
@@ -122,8 +122,8 @@
       "dates": "Apr 2023 - Jun 2024",
       "description": "Art commerce and online exhibition platform. Worked on media processing, AWS infrastructure, and API migration for a running service.",
       "highlights": [
-        "**Serverless media post-processing.** Addressed slow loading of high-resolution originals by deploying Lambda functions and S3 upload triggers with Serverless Framework. Generated images and videos in display-specific sizes, used in-memory streams, and excluded derived-file events to avoid unnecessary file I/O and duplicate processing.",
-        "**Instance sizing and scaling-policy adjustments.** Changed EC2 instances from **t3.medium to t3.small** and the CPU scaling target from **40% to 20%**. Consolidated ECS and Auto Scaling capacity into shared environment-specific variables.",
+        "**Asynchronous media processing with Python · Serverless Framework · S3/Lambda.** Generated display-specific WebP images and multiple video resolutions after upload. Used in-memory streams and filtered derived-file events to eliminate temporary-file handling and duplicate conversions.",
+        "**Terraform · AWS EC2/ECS infrastructure and Auto Scaling configuration.** Changed instances from **t3.medium to t3.small** and the CPU scaling target from **40% to 20%**, consolidating environment-specific capacity settings.",
         "**Gradual API and TypeORM migration.** Migrated customer, artwork, and purchasing functionality while **running v2 and v3 APIs in parallel**. Added tests and enabled feature-by-feature frontend adoption to limit the impact on the existing web service.",
         "**Multi-currency purchasing and payment integration.** Applied exchange rates, discounts, and shipping costs across carts, orders, and payments for currencies including EUR and THB. Integrated Naver Pay, supported its approval process, and restored coupons on cancellation."
       ]
@@ -162,9 +162,9 @@
       "dates": "2024 - Present",
       "description": "AI journaling app offering diary analysis and illustrations. Co-planned with a friend; personally developed and deployed the app and backend.",
       "highlights": [
-        "**Built and deployed the app and backend, launching in about two months.** Co-planned the product with a friend and developed the iOS/Android app and backend. Provisioned AWS deployment infrastructure with Terraform and Docker.",
+        "**AI journaling app built with Django/DRF · MySQL · React/Capacitor.** Co-planned the product with a friend, personally developed the app and backend, and handled AWS deployment, **launching on iOS and Android in about two months**.",
         "**Connected AI analysis, illustrations, and in-app purchases to the product experience.** Implemented asynchronous result retrieval, translation, server-side purchase validation, and access entitlements.",
-        "**Cumulative signups grew from about 10 to over 100.** Used Firebase installation, usage, and screen drop-off data to shift focus from a global audience to Korean users. Signups increased within weeks while iterating on feedback and running social media promotion."
+        "**Product improvements guided by Firebase data and user feedback.** Shifted focus to Korean users and combined feature improvements with social media promotion; **cumulative signups grew from about 10 to over 100 within weeks**."
       ]
     }
   ]
