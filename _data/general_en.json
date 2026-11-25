@@ -1,0 +1,171 @@
+{
+  "name": "IN JI",
+  "title": "Backend Engineer",
+  "skill_groups": [
+    {
+      "name": "Language",
+      "items": [
+        "Python",
+        "TypeScript",
+        "Kotlin",
+        "JavaScript",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Backend",
+      "items": [
+        "Django / DRF",
+        "NestJS",
+        "Spring Boot"
+      ]
+    },
+    {
+      "name": "Database",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "DynamoDB",
+        "MongoDB",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "items": [
+        "AWS (EC2, ECS, RDS, S3, ECR, Route53, Lambda, SQS, Secrets Manager, CloudFront)",
+        "Terraform",
+        "Docker",
+        "Serverless Framework",
+        "Datadog"
+      ]
+    },
+    {
+      "name": "ETC",
+      "items": [
+        "Git",
+        "Swagger",
+        "Notion",
+        "Slack",
+        "Claude Code",
+        "Codex",
+        "Hermes",
+        "Herdr"
+      ]
+    }
+  ],
+  "intro": [
+    "**I enjoy simplifying repetitive work and improving the systems behind running services.** When building a feature, I consider how people will use it and what it will take to operate it day to day.",
+    "Seeing operations staff repeatedly rely on developers or connect to servers to complete routine tasks led me to build internal web tools they could use themselves. **Changing how work gets done through software** was rewarding, and it made me look for ways to remove manual work whenever I encountered it.",
+    "Expanding services across countries and migrating existing APIs taught me to look beyond the code being changed to the features and operations that depend on it. I am particularly interested in **making meaningful structural changes while keeping existing services running**.",
+    "With re:feel, an app I co-planned with a friend, I also built and operated a product myself. I developed the app and backend, handled deployment, and used usage data and feedback to refine its target audience and features after launch. I enjoy seeing how people use a product and turning their responses into the next improvement.",
+    "I now use MCP to bring product specifications and related code into context, and work with AI on implementation plans to speed up development. I review generated code myself and base architecture and technology decisions on the needs of the service and its operating environment."
+  ],
+  "companies": [
+    {
+      "id": "smaxh",
+      "role": "Backend Developer",
+      "stack": [
+        "Python",
+        "Django",
+        "MySQL",
+        "DynamoDB",
+        "AWS",
+        "Terraform",
+        "Datadog"
+      ],
+      "name": "smaxh",
+      "dates": "Apr 2025 - Present",
+      "description": "Tennis matching, lessons, and community platform. Backend development and operations for services in Korea, the US, and Australia.",
+      "highlights": [
+        "**Payments for tier-based matches, social matches, and lessons.** Built payment, cancellation, refund, settlement, and withdrawal flows. Developed and operated the backend for a matching service whose **monthly payment volume grew from KRW 200M to 400M and transaction count from 16K to 30K** between August and October 2025.",
+        "**Partial refunds and settlement for no-show deposits.** Contributed to deposit payment, partial-refund, and settlement functionality; the deposit configuration rate was **78% in September 2026**.",
+        "**Web authentication compatible with the existing mobile app.** Integrated Google, Apple, and Kakao web login with existing signup and account-linking flows. Separated app and web authentication, including environment-specific OAuth and Secrets configuration in Terraform and ECS.",
+        "**Cross-country account linking, closure, and re-registration consistency.** Connected country-specific accounts through shared UUIDs and merge logic in DynamoDB. Added shared-state checks to account linking, login, and token refresh to prevent accounts closed in one country from logging in through another.",
+        "**US and Australian launch support.** Integrated local tennis-court data and court-specific time zones, correcting match-date errors caused by differences between server and local time.",
+        "**Unified APIs for social and tier-based matches.** Consolidated response and processing structures while retaining legacy endpoints and reusing payment and notification logic so the existing app could coexist with the new APIs.",
+        "**Lesson development and operational improvements.** Built models and APIs for recurring schedules, applications, payments, and settlement. Used APM and SQL to diagnose slow queries and reduce repeated lookups and unnecessary joins."
+      ]
+    },
+    {
+      "id": "playtag",
+      "role": "Software Engineer",
+      "stack": [
+        "Python",
+        "Kotlin",
+        "Spring Boot",
+        "AWS"
+      ],
+      "name": "Playtag",
+      "dates": "Jun 2024 - Mar 2025",
+      "description": "AI video analysis of preschool children's behavior. Built internal web applications for analysis reruns and client configuration.",
+      "highlights": [
+        "**Analysis-rerun preparation reduced from about 1 hour to 5 minutes or less.** Built and deployed a Python web application that replaced manual server access and code execution with a selection-and-submit workflow.",
+        "**Client configuration moved from developer edits to operations self-service.** Enabled staff to record and apply kindergarten schedules and settings through a web interface, reducing handoffs and manual code changes. Ran the tool on a low-cost single instance suited to internal usage.",
+        "**Applied a new stack within a one-week sprint.** Built the complete set of kindergarten student-management APIs on my first production project using Kotlin and Spring Boot."
+      ]
+    },
+    {
+      "id": "artue",
+      "role": "Backend Developer",
+      "stack": [
+        "TypeScript",
+        "NestJS",
+        "TypeORM",
+        "PostgreSQL",
+        "Python",
+        "AWS Lambda",
+        "Serverless Framework",
+        "Terraform"
+      ],
+      "name": "Artue.io",
+      "dates": "Apr 2023 - Jun 2024",
+      "description": "Art commerce and online exhibition platform. Worked on media processing, AWS infrastructure, and API migration for a running service.",
+      "highlights": [
+        "**Serverless media post-processing.** Addressed slow loading of high-resolution originals by deploying Lambda functions and S3 upload triggers with Serverless Framework. Generated images and videos in display-specific sizes, used in-memory streams, and excluded derived-file events to avoid unnecessary file I/O and duplicate processing.",
+        "**Instance sizing and scaling-policy adjustments.** Changed EC2 instances from **t3.medium to t3.small** and the CPU scaling target from **40% to 20%**. Consolidated ECS and Auto Scaling capacity into shared environment-specific variables.",
+        "**Gradual API and TypeORM migration.** Migrated customer, artwork, and purchasing functionality while **running v2 and v3 APIs in parallel**. Added tests and enabled feature-by-feature frontend adoption to limit the impact on the existing web service.",
+        "**Multi-currency purchasing and payment integration.** Applied exchange rates, discounts, and shipping costs across carts, orders, and payments for currencies including EUR and THB. Integrated Naver Pay, supported its approval process, and restored coupons on cancellation."
+      ]
+    },
+    {
+      "id": "viewee",
+      "role": "Software Development Engineer",
+      "stack": [
+        "Python",
+        "Airflow",
+        "OCR",
+        "TypeScript",
+        "NestJS"
+      ],
+      "name": "Viewee Inc.",
+      "dates": "Feb 2021 - Apr 2023",
+      "description": "Services connecting user-contributed data, AI analysis, and blockchain rewards. Developed data validation automation and transaction APIs.",
+      "highlights": [
+        "**Automated manual image-annotation review.** Combined bounding-box and OCR cross-checks with text-similarity validation and scheduled recurring checks in Airflow.",
+        "**EarnTube token transaction APIs.** Built TypeScript/NestJS APIs and history models to track transaction results and hashes, and migrated legacy points history."
+      ]
+    },
+    {
+      "id": "refeel",
+      "role": "Co-planning, app and backend development, and deployment",
+      "stack": [
+        "Django/DRF",
+        "MySQL",
+        "Gemini",
+        "React",
+        "Capacitor",
+        "AWS",
+        "Terraform"
+      ],
+      "name": "re:feel",
+      "dates": "2024 - Present",
+      "description": "AI journaling app offering diary analysis and illustrations. Co-planned with a friend; personally developed and deployed the app and backend.",
+      "highlights": [
+        "**Built and deployed the app and backend, launching in about two months.** Co-planned the product with a friend and developed the iOS/Android app and backend. Provisioned AWS deployment infrastructure with Terraform and Docker.",
+        "**Connected AI analysis, illustrations, and in-app purchases to the product experience.** Implemented asynchronous result retrieval, translation, server-side purchase validation, and access entitlements.",
+        "**Cumulative signups grew from about 10 to over 100.** Used Firebase installation, usage, and screen drop-off data to shift focus from a global audience to Korean users. Signups increased within weeks while iterating on feedback and running social media promotion."
+      ]
+    }
+  ]
+}

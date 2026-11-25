@@ -18,3 +18,12 @@ GitHub Pages / Jekyll 기반 공개 백엔드 이력서. 소개와 기술 스택
 ## 배포
 
 main 브랜치 루트의 GitHub Pages Jekyll 빌드를 사용합니다. 내부 코드·비밀값·검토용 자료는 게시하지 않습니다.
+
+
+## Language versions
+
+- Korean: `/`
+- English: `/en/`
+- Each page links to its matching PDF in `/assets/`.
+- Build sources: `output/general/build_clean.py`, `output/general-en/build.py`, then `output/general-en/publish_web.py` in the authoring workspace.
+- English content is retained in `_data/general_en.json`; `/en/index.html` is generated static HTML.

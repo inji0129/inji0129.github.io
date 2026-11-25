@@ -12,3 +12,5 @@
 @media print{.skill-group h3{letter-spacing:.04em;white-space:nowrap}}
 
 @media print{#career{break-before:page}}
+
+.language-switch{display:flex;align-items:center;gap:2px;padding:2px;border:1px solid var(--line);border-radius:6px;white-space:nowrap}.language-switch a{font-size:12px;padding:3px 7px;border-radius:4px;color:#6e7887}.language-switch a[aria-current=page]{color:var(--accent);background:#edf6f0;font-weight:700}@media(max-width:680px){.bar-inner{flex-wrap:wrap;gap:8px 16px}.topbar nav{order:3;flex-basis:100%;margin-right:0;justify-content:flex-start}.actions{margin-left:auto;gap:10px}.language-switch a{font-size:11px;padding:3px 6px}}
