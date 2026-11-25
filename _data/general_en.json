@@ -58,10 +58,10 @@
   ],
   "intro": [
     "**I enjoy simplifying repetitive work and improving the systems behind running services.** When building a feature, I consider how people will use it and what it will take to operate it day to day.",
-    "Seeing operations staff repeatedly rely on developers or connect to servers to complete routine tasks led me to build internal web tools they could use themselves. **Changing how work gets done through software** was rewarding, and it made me look for ways to remove manual work whenever I encountered it.",
-    "Expanding services across countries and migrating existing APIs taught me to look beyond the code being changed to the features and operations that depend on it. I am particularly interested in **making meaningful structural changes while keeping existing services running**.",
+    "When operations staff had to ask developers or connect to servers for routine tasks, I built internal web tools they could use themselves. I enjoyed **changing how work gets done through software**, and began looking for ways to remove manual steps elsewhere.",
+    "Expanding services across countries and migrating APIs taught me to check how code changes affect existing features and operations. I am interested in **changing system structures while keeping services running**.",
     "With re:feel, an app I co-planned with a friend, I also built and operated a product myself. I developed the app and backend, handled deployment, and used usage data and feedback to refine its target audience and features after launch. I enjoy seeing how people use a product and turning their responses into the next improvement.",
-    "I now use MCP to bring product specifications and related code into context, and work with AI on implementation plans to speed up development. I review generated code myself and base architecture and technology decisions on the needs of the service and its operating environment."
+    "I use MCP to review product specifications alongside related code and work with AI on implementation plans and repetitive tasks. I verify generated code myself and choose architectures and technologies based on service requirements and operating conditions."
   ],
   "companies": [
     {
@@ -81,13 +81,13 @@
       "description": "Tennis matching, lessons, and community platform. Backend development and operations for services in Korea, the US, and Australia.",
       "highlights": [
         "**Python · Django · MySQL backend for match and lesson payments and settlement** — Built payment, cancellation, refund, and withdrawal flows. Supported a service whose monthly payment volume grew from **KRW 200M to 400M**, and transaction count from **16K to 30K**, between August and October 2025.",
-        "**Docker · Terraform · AWS integration of COOCON balance withdrawals** — Owned delivery from container, infrastructure, S3 configuration, and Secrets Manager setup to API development and deployment. Enabled SMAXH Pay withdrawals to bank accounts, with account registration, lookup, withdrawal, and transaction-history APIs.",
+        "**Docker · Terraform · AWS integration of COOCON balance withdrawals** — Built the infrastructure and APIs to withdraw SMAXH Pay balances to bank accounts. Configured Docker, Terraform, S3 environment settings, and Secrets Manager credentials; developed account registration, lookup, withdrawal, and transaction history APIs and deployed the application.",
         "**No-show deposit payments, refunds, and settlement** — Contributed to the full deposit-processing flow; the deposit configuration rate was **78% in September 2026**.",
         "**Web authentication compatible with the existing app** — Integrated Google, Apple, and Kakao web login with existing signup and account-linking flows. Separated app and web sessions and configured environment-specific deployment settings while preserving app compatibility.",
         "**DynamoDB-based global account integration** — Kept country-specific databases separate while linking accounts through shared UUIDs. Added shared-state validation to login and token refresh to resolve cross-country inconsistencies in account closure and re-registration.",
-        "**Localization of matching services for the US and Australia** — Integrated local tennis-court data and identified match-date errors caused by server/court time-zone differences during pre-launch validation. Updated scheduling to use court-local time and deployed the fix.",
+        "**US and Australian launch validation** — Integrated local tennis-court data and found incorrect match dates caused by server and court time-zone differences during pre-launch testing. Changed scheduling to use court-local time, verified the fixes, and deployed before launch.",
         "**Shared APIs for social and tier-based matches** — Consolidated response and processing structures and reused payment and notification logic. Retained legacy endpoints so the existing app could coexist with the new APIs.",
-        "**pytest · Docker test environments and regression tests** — Used MySQL and DynamoDB Local to verify normal and failure paths for payments, refunds, settlement, authentication, and account linking. Wrote tests for duplicate processing and concurrent session refresh and revocation.",
+        "**pytest · Docker test environments and regression tests** — Set up MySQL and DynamoDB Local to test payment, refund, settlement, authentication, and account-linking APIs. Wrote success and failure tests, including duplicate processing and concurrent session refresh and revocation.",
         "**Lesson development and operational query optimization** — Built recurring-schedule, application, payment, and settlement models and APIs. Used Datadog APM and SQL to diagnose bottlenecks and reduce repeated lookups, unnecessary joins, and aggregation work."
       ]
     },
@@ -104,7 +104,7 @@
       "dates": "Jun 2024 - Mar 2025",
       "description": "AI video analysis of preschool children's behavior. Built internal web applications for analysis reruns and client configuration.",
       "highlights": [
-        "**Python web tool for rerunning failed video-analysis jobs** — Replaced manual server access and code execution with a web-based selection-and-submit workflow, reducing rerun preparation from **about 1 hour to 5 minutes or less**. Built and deployed the tool.",
+        "**Python web application for rerunning failed video-analysis jobs** — Built and deployed an internal web application where staff could select targets and request reruns. Replaced server access and manual code execution, reducing preparation time from **about 1 hour to 5 minutes or less**.",
         "**Self-service client configuration for operations staff** — Enabled operations staff to record and apply kindergarten schedules and settings directly, reducing developer handoffs and manual code changes. Deployed on a low-cost single instance suited to internal usage.",
         "**Kotlin · Spring Boot APIs for kindergarten student management** — Built the complete set of new APIs **within a one-week sprint**, applying both technologies in production for the first time."
       ]
@@ -126,9 +126,9 @@
       "dates": "Apr 2023 - Jun 2024",
       "description": "Art commerce and online exhibition platform. Worked on media processing, AWS infrastructure, and API migration for a running service.",
       "highlights": [
-        "**Python · Serverless Framework · S3/Lambda asynchronous media processing** — Generated display-specific WebP images and multiple video resolutions after upload. Used in-memory streams and filtered derived-file events to eliminate temporary-file handling and duplicate conversions.",
+        "**Python · Serverless Framework · S3/Lambda asynchronous media processing** — Reduced the loading burden of high-resolution originals by generating WebP images and multiple video resolutions after upload. Used in-memory streams instead of temporary files and excluded derived-file events to prevent duplicate conversions.",
         "**Terraform · AWS EC2/ECS infrastructure and Auto Scaling configuration** — Changed instances from **t3.medium to t3.small** and the CPU scaling target from **40% to 20%**, consolidating environment-specific capacity settings.",
-        "**Gradual API and TypeORM migration** — Migrated customer, artwork, and purchasing functionality while **running v2 and v3 APIs in parallel**. Added tests and supported feature-by-feature frontend adoption to limit the impact of the changes.",
+        "**Gradual API and TypeORM migration** — Migrated customer, artwork, and purchasing functionality while **running v2 and v3 APIs in parallel**. Added validation tests so the frontend could adopt new APIs one feature at a time.",
         "**Multi-currency purchasing and payments** — Applied exchange rates, discounts, and shipping costs across carts, orders, and payments for currencies including EUR and THB. Integrated Naver Pay, supported its approval process, and restored coupons on cancellation."
       ]
     },
@@ -166,7 +166,7 @@
       "dates": "2024 - Present",
       "description": "AI journaling app offering diary analysis and illustrations. Co-planned with a friend; personally developed and deployed the app and backend.",
       "highlights": [
-        "**Django/DRF · MySQL · React/Capacitor development and launch of an AI journaling app** — Co-planned the product with a friend, personally developed the app and backend, and handled AWS deployment, **launching on iOS and Android in about two months**.",
+        "**Django/DRF · MySQL · React/Capacitor AI journaling app** — Co-planned the product with a friend, built the app and backend myself, and handled AWS deployment. **Launched on iOS and Android in about two months**.",
         "**AI analysis and in-app purchase integration** — Connected asynchronous Gemini analysis and illustration results, translation, server-side purchase validation, and access entitlements to the app experience.",
         "**Firebase data and user feedback for product improvements** — Shifted focus to Korean users and combined feature improvements with social media promotion; **cumulative signups grew from about 10 to over 100 within weeks**."
       ]
